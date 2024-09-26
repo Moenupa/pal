@@ -17,10 +17,13 @@ import copy
 import datetime
 from typing import Any, Dict
 import dateutil.relativedelta
+import math
 
 
 class GenericRuntime:
-    GLOBAL_DICT = {}
+    GLOBAL_DICT = {
+        'math': math
+    }
     LOCAL_DICT = None
     HEADERS = []
     def __init__(self):
@@ -60,4 +63,3 @@ class CustomDict(dict):
     
 class ColorObjectRuntime(GenericRuntime):
     GLOBAL_DICT = {'dict': CustomDict}
-

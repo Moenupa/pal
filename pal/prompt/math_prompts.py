@@ -211,3 +211,45 @@ def solution():
 How about this question?
 Q: {question}
 '''.strip()
+
+
+MATH_NOVAR_PROMPT = '''
+Let's use python to solve math problems. Here are three examples how to do it,
+Q: Olivia has $23. She bought five bagels for $3 each. How much money does she have left?
+```
+def solution():
+    """Olivia has $23. She bought five bagels for $3 each. How much money does she have left?"""
+    a = 23
+    b = 5
+    c = 3
+    d = b * c
+    e = a - d
+    return e
+```
+
+Q: Michael had 58 golf balls. On tuesday, he lost 23 golf balls. On wednesday, he lost 2 more. How many golf balls did he have at the end of wednesday?
+```
+def solution():
+    """Michael had 58 golf balls. On tuesday, he lost 23 golf balls. On wednesday, he lost 2 more. How many golf balls did he have at the end of wednesday?"""
+    a = 58
+    b = 23
+    c = 2
+    d = a - b - c
+    return d
+```
+
+Q: There were nine computers in the server room. Five more computers were installed each day, from monday to thursday. How many computers are now in the server room?
+```
+def solution():
+    """There were nine computers in the server room. Five more computers were installed each day, from monday to thursday. How many computers are now in the server room?"""
+    a = 9
+    b = 5
+    c = 4  # 4 days between monday and thursday
+    d = b * c
+    e = a + d
+    return e
+```
+
+How about this question?
+Q: {question}
+'''.strip()
